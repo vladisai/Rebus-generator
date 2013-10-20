@@ -1,0 +1,30 @@
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\ResolveAssemblyReference.cache
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\bin\WebApplication8.dll
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
+F:\WebApplication8\WebApplication8\bin\WebApplication8.dll
+F:\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+F:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+F:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
+h:\WebApplication8\WebApplication8\bin\WebApplication8.dll
+h:\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+h:\WebApplication8\WebApplication8\obj\Debug\ResolveAssemblyReference.cache
+h:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+h:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
+D:\WebApplication8\WebApplication8\bin\WebApplication8.dll
+D:\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+D:\WebApplication8\WebApplication8\obj\Debug\ResolveAssemblyReference.cache
+D:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+D:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
+F:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.csprojResolveAssemblyReference.cache
+n:\WebApplication8\WebApplication8\bin\WebApplication8.dll
+n:\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+n:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.csprojResolveAssemblyReference.cache
+n:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+n:\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\bin\WebApplication8.dll
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\obj\Debug\WebApplication8.csprojResolveAssemblyReference.cache
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb

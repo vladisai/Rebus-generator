@@ -1,0 +1,152 @@
+Var a:array [1..100] of char;
+s,s1,s2,d,d1:string;
+l,i,j,k,t,n,m:longint;
+begin
+assign(input,'input.txt');
+reset(input);
+assign(output,'1.txt');
+rewrite(output);
+  readln(d);
+  d1:='';
+  l:=0;
+  if length(d)<=7 then begin
+    writeln(d);
+    l:=1;
+    if l<length(d)  then begin
+      d1:=d;
+      delete(d1,1,1);
+      writeln(d1);
+      d1:=d;
+      delete(d1,length(d1),1);
+      writeln(d1);
+    end;
+    l:=2;
+    if l<length(d)  then begin
+      d1:=d;
+      delete(d1,1,2);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,1);
+      delete(d1,length(d1),1);
+      writeln(d1);
+      d1:=d;
+      delete(d1,length(d1)-1,2);
+      writeln(d1);
+    end;
+    l:=3;
+    if l<length(d)  then begin
+      d1:=d;
+      delete(d1,1,3);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,2);
+      delete(d1,length(d1),1);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,1);
+      delete(d1,length(d1)-1,2);
+      writeln(d1);
+      d1:=d;
+      delete(d1,length(d1)-2,3);
+      writeln(d1);
+    end;
+    l:=4;
+    if l<length(d)  then begin
+      d1:=d;
+      delete(d1,1,4);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,3);
+      delete(d1,length(d1),1);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,2);
+      delete(d1,length(d1)-1,2);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,1);
+      delete(d1,length(d1)-2,3);
+      writeln(d1);
+      d1:=d;
+      delete(d1,length(d1)-3,4);
+      writeln(d1);
+    end;
+    l:=5;
+    if l<length(d)  then begin
+      d1:=d;
+      delete(d1,1,5);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,4);
+      delete(d1,length(d1),1);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,3);
+      delete(d1,length(d1)-1,2);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,2);
+      delete(d1,length(d1)-2,3);
+      writeln(d1);
+      d1:=d;
+      delete(d1,1,1);
+      delete(d1,length(d1)-3,4);
+      writeln(d1);
+      d1:=d;
+      delete(d1,length(d1)-4,5);
+      writeln(d1);
+    end;
+  end;
+  a[1]:='а';
+  a[2]:='е';
+  a[3]:='и';
+  a[4]:='о';
+  a[5]:='у';
+  a[6]:='ы';
+  a[7]:='э';
+  a[8]:='ю';
+  a[9]:='я';
+  a[10]:='б';
+  a[11]:='в';
+  a[12]:='г';
+  a[13]:='д';
+  a[14]:='ж';
+  a[15]:='з';
+  a[16]:='й';
+  a[17]:='к';
+  a[18]:='л';
+  a[19]:='м';
+  a[20]:='н';
+  a[21]:='п';
+  a[22]:='р';
+  a[23]:='с';
+  a[24]:='т';
+  a[25]:='ф';
+  a[26]:='х';
+  a[27]:='ц';
+  a[28]:='ч';
+  a[29]:='ш';
+  a[30]:='щ';
+  a[31]:='ь';
+  a[32]:='ъ';
+  for i:=1 to 32 do
+        writeln(a[i]);
+  s:='на';
+  s1:='над';
+  s2:='под';
+  For i:=1 to 9 do
+    for j:=10 to 30 do begin
+      writeln(s,a[i],a[j]);
+      writeln(s1,a[i],a[j]);
+      writeln(s2,a[i],a[j]);
+    end;
+  for i:=10 to 30 do
+    for j:=1 to 9 do begin
+      writeln(s,a[i],a[j]);
+      writeln(s,a[i],a[j]);
+      writeln(s1,a[i],a[j]);
+      writeln(s2,a[i],a[j]);
+    end;
+end.
+
+

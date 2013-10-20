@@ -1,0 +1,204 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.IO;
+using WebApplication8;
+using System.Web.Caching;
+
+namespace WebApplication8.BisinessLogic
+{
+    public class vocline : IComparable<vocline>
+    {
+        public string word;
+        public string pars;
+        public string file;
+        public int CompareTo(vocline other)
+        {
+            return string.Compare(word, other.word);
+        }
+    }
+    public class RebGen : System.Web.UI.Page
+    {
+        public string[] ss = new string[100];
+        public int l = 0, k = 0;
+        public int[] ar = new int[100]; 
+        public string ss1, ss2, ss3,kk;
+
+        public string[] Files = new string[1000], Pars = new string[1000], MFiles = new string[1000], MPars = new string[1000];
+        public string stringS;
+        public string stringR;
+        public List<vocline> list;
+        public int isRead = 0;
+        Random rnd = new Random();
+        public Image img1 = new Image();
+        private int kol = 0, mind = 100500,ml = 0,CountPeaces = 2;
+        private bool EM = false;
+        
+        private int GetDif(string s1){
+            int res = 0;
+            var words = s1.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (s1.IndexOf("strikeot") >= 0)
+                res++;
+            if (words[0] == "over")
+                res++;
+            if (s1.IndexOf("switch") >= 0 && words[5] != "0")
+                res++;
+            if (words[1][5] != '0')
+                res++;
+            if (words[2][6] != '0')
+                res++;
+            return res;
+
+        }
+
+        public RebGen(string strS, List<vocline> li)
+        {
+            int m, n, l1, l2, i = 0;
+
+            stringS = strS;
+            list = li;
+            isRead = 1;
+            if (Session["Easy_mode"] == "1"){
+                EM = true;
+            }
+
+            GenStr(strS);           
+
+            FindP();
+        }
+
+        public void GenStr(string strS)
+        {
+            int m, n, l1, l2, i = 0;
+            l1 = strS.Length;
+            l2 = 0;
+            i = 0;
+            if (EM == false)
+            {
+                while (l2 != l1)
+                {
+                    n = (rnd.Next(1000) % 5) + 1;
+                    m = Math.Min(l1 - l2, n);
+                    ss[i] = strS.Substring(l2, m);
+                    i++;
+                    l2 += m;
+                }
+                l = i;
+                stringR = "";
+            }
+            else
+            {
+                int hod = strS.Length / CountPeaces;
+
+                while (l2 < l1)
+                {
+                    if (i < CountPeaces)
+                    {
+                        m = hod;
+                    }
+                    else
+                    {
+                        m = l1 - l2;
+                    }
+                    ss[i] = strS.Substring(l2, m);
+                    i++;
+                    l2 += m;
+                }
+                l = i;
+                stringR = "";
+            }
+            
+            
+        }
+
+        public void  FindP(){
+
+                int sumd = 0,mnd = 0,curd = 0;
+                var lines = list;
+                bool pom1 = false;
+                string minfile="",minpar="";
+                
+
+
+            for (int i=0; i<l; i++){
+                vocline what = list[0];
+                what.word = ss[i];
+                var rez = lines.BinarySearch(what);
+                int left=rez, right=rez;
+                if (rez < 0 || rez > lines.Count)
+                {
+                    GenStr(stringS);
+                    FindP();
+                    return;
+                }
+                while (left>3 && lines[left].word == lines[rez].word ) left--;
+                while (right<lines.Count-5 && lines[right].word == lines[rez].word) right++;
+                left++;
+                right--;
+
+                if (EM == false)
+                {
+                    int num = rnd.Next(right - left);
+                    Files[i] = lines[left + num].file;
+                    Pars[i] = lines[left + num].pars;
+                    if (Pars[i].IndexOf("strikeout") >= 0)
+                        pom1 = true;
+                }
+                else
+                {
+                    mnd = 10005000;
+                    for (int j = left; j <= right;j++ )
+                    {
+                        curd = GetDif(lines[j].pars);
+                        if (curd < mnd)
+                        {
+                            mnd = curd;
+                            minfile = lines[j].file;
+                            minpar = lines[j].pars;
+                        }
+                    }
+                    Files[i] = minfile;
+                    Pars[i] = minpar;
+                    sumd += mnd;
+                }                
+            }
+            if ((mind > sumd && EM == true)||(EM == false))
+            {
+                MFiles = Files;
+                MPars = Pars;
+                mind = sumd;
+                ml = l;
+            }
+
+
+            if (EM == true && mind > l && kol < 500)
+            {
+                kol++;
+                GenStr(stringS);
+                FindP();
+                return;
+            }
+
+            if (EM == false && pom1 == false && kol < 500)
+            {
+                kol++;
+                GenStr(stringS);
+                FindP();
+                return;
+            }
+
+            Session["len"] = ml;
+            Session["Files"] = MFiles;
+            Session["Pars"] = MPars;
+
+            img1 = new Image
+                {
+                    ImageUrl = string.Format("GetPic.aspx"),
+                    BorderStyle = BorderStyle.None
+                };
+        }        
+    }
+}

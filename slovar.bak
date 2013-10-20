@@ -1,0 +1,55 @@
+Var a:array [1..100] of char;
+s,s1,s2:string;
+l,i,j,k,t,n,m:longint;
+begin
+assign(output,'1.txt');
+rewrite(output);
+  a[1]:='а';
+  a[2]:='е';
+  a[3]:='и';
+  a[4]:='о';
+  a[5]:='у';
+  a[6]:='ы';
+  a[7]:='э';
+  a[8]:='ю';
+  a[9]:='я';
+  a[10]:='б';
+  a[11]:='в';
+  a[12]:='г';
+  a[13]:='д';
+  a[14]:='ж';
+  a[15]:='з';
+  a[16]:='й';
+  a[17]:='к';
+  a[18]:='л';
+  a[19]:='м';
+  a[20]:='н';
+  a[21]:='п';
+  a[22]:='р';
+  a[23]:='с';
+  a[24]:='т';
+  a[25]:='ф';
+  a[26]:='х';
+  a[27]:='ц';
+  a[28]:='ч';
+  a[29]:='ш';
+  a[30]:='щ';
+  s:='на';
+  s1:='над';
+  s2:='под';
+  For i:=1 to 9 do
+    for j:=10 to 30 do begin
+      writeln(s,a[i],a[j]);
+      writeln(s1,a[i],a[j]);
+      writeln(s2,a[i],a[j]);
+    end;
+  for i:=10 to 30 do
+    for j:=1 to 9 do begin
+      writeln(s,a[i],a[j]);
+      writeln(s,a[i],a[j]);
+      writeln(s1,a[i],a[j]);
+      writeln(s2,a[i],a[j]);
+    end;
+end.
+
+

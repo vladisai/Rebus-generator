@@ -1,0 +1,9 @@
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\ResolveAssemblyReference.cache
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\bin\WebApplication8.dll
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+c:\users\vlad\documents\visual studio 2010\Projects\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\bin\WebApplication8.dll
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\bin\WebApplication8.pdb
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\obj\Debug\WebApplication8.dll
+e:\Informatics\Проект Ребусы\WebApplication8\WebApplication8\obj\Debug\WebApplication8.pdb
